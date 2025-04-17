@@ -1,0 +1,20 @@
+{
+    "image_path": "images/000018-rot_000.png",
+    "height": 480,
+    "width": 640,
+    "masks": [
+        {
+            "label": "obj_000018",
+            "points": [
+                [
+                    234,
+                    238
+                ],
+                [
+                    423,
+                    241
+                ]
+            ]
+        }
+    ]
+}
