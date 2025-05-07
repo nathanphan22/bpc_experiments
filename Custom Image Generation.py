@@ -65,14 +65,15 @@ def render_with_rotations(model_path, n, output_dir, txt_dir, txt_filename):
             file.write(" ".join(f"{val:.6f}" for val in flat_matrix) + "\n")
 
 def main():
-    n = 100  # Number of random rotations per model
+    n = 2000  # Number of random rotations per model
     input_directory = "ipd/models"
     output_base_dir = "custom_images"
     rotation_matrix_dir = os.path.join(output_base_dir, "rotation_matrices")
     os.makedirs(rotation_matrix_dir, exist_ok=True)
 
     for filename in os.listdir(input_directory):
-        if filename.endswith(".ply"):
+        #if filename.endswith(".ply"):
+        if filename == 'obj_000004.ply' or filename == 'obj_000020.ply' :
             model_name = filename.strip("obj_").strip(".ply")
             full_model_path = os.path.join(input_directory, filename)
             output_dir = os.path.join(output_base_dir, model_name)

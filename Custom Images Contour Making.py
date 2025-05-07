@@ -15,7 +15,7 @@ def render_with_rotations(model_path, output_dir, rot_mat_file, txt_directory):
 
     # Sample n random rotations
     flattened_data = np.loadtxt(rot_mat_file)
-    rotation_matrices = flattened_data.reshape(-1, 3, 3)
+    rotation_matrices = flattened_data.reshape(-1, 3, 3) 
 
     # Renderer setup
     width, height = 640, 480
@@ -61,7 +61,7 @@ def render_with_rotations(model_path, output_dir, rot_mat_file, txt_directory):
             img = renderer.render_to_image()
             img_path = os.path.join(output_dir, f"rot_{i:03d}.png")
             o3d.io.write_image(img_path, img)
-
+            
             # Reload image
             img = cv2.imread(img_path)
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
