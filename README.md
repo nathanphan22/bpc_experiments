@@ -279,7 +279,7 @@ This program automates the generation of contour-based polygon annotations for t
   "masks": [
     {
       "label": "obj_000012",
-      "points": [[x1, y1], [x2, y2], ...]
+      "points": [[10, 42], [12, 46], ...]
     },
     ...
   ]
